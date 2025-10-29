@@ -1,0 +1,78 @@
+/* Basic dark theme for certificates */
+.certificates-root {
+    background: linear-gradient(180deg, #0b0d10 0%, #0f1215 100%);
+    color: #e6edf3;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Loading / empty states */
+.certificates-loading,
+.certificates-empty {
+    color: #9aa6b2;
+    text-align: center;
+    padding: 28px 12px;
+    font-size: 16px;
+}
+
+/* Generic carousel item - many carousels use .carousel-item or you can adapt selector to your carousel */
+.carousel-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 180px;
+    display: flex;
+    align-items: flex-end;
+    background-color: #0f1316; /* fallback when no thumbnail */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+}
+
+/* If your Carousel passes the bgStyle inline, that will override the CSS background */
+.carousel-item::after {
+    /* subtle dark overlay to keep text readable */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(3,7,12,0.2) 0%, rgba(2,6,10,0.7) 100%);
+    pointer-events: none;
+}
+
+/* content area inside each carousel card (title/desc) */
+.carousel-item .card-content {
+    position: relative;
+    z-index: 2;
+    padding: 16px;
+    width: 100%;
+    color: #eef6ff;
+    backdrop-filter: blur(0.5px);
+}
+
+.carousel-item .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.carousel-item .card-desc {
+    font-size: 13px;
+    color: #bcd0df;
+}
+
+/* icon style */
+.carousel-icon {
+    color: #9ad1ff;
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+/* small responsive tweaks */
+@media (max-width: 480px) {
+    .carousel-item {
+        min-height: 140px;
+    }
+    .carousel-item .card-title { font-size: 16px; }
+    .carousel-item .card-desc { font-size: 12px; }
+}
