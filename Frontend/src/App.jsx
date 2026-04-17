@@ -1,47 +1,31 @@
-import React, { useEffect, useState } from "react";
-import { getPortfolio } from "./api";
-import Profile from "./components/Profile";
-import Certificates from "./components/Certificates/Certificates";
-import Resume from "./components/Resume";
-// import Navbar from "./components/Navbar/Navbar";
-import Container from '@mui/material/Container';
-import About from "./components/About/About"
-import Projects from "./components/Projects/Projects";
-import { motion as Motion } from 'framer-motion'
+import React from "react";
 
 function App() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    getPortfolio().then((res) => setData(res.data));
-  }, []);
-
-  if (!data) return <h2 className="text-center mt-10">Loading Portfolio...</h2>;
-
   return (
-    <div>
-      
-
-
-   <Motion.div 
-   initial = {{opacity:0,translateX:"1%"}}
-   whileInView={{opacity:2,translateX:"100"}}
-   transition={{duration:2,}}
-   > 
-    < Profile  />
-    </Motion.div>
-   
-       {/* <Navbar/> */}
-      <Motion.div
-       
-    initial={{opacity:0,translateX:"100%"}}
-    whileInView={{opacity:2,translateX:"0"}}
-    transition={{duration:1.5 , }}
-      ><Projects/></Motion.div>
-      
-      <Certificates/>
-  
-    </div>
+    <main
+      style={{
+        minHeight: "100vh",
+        display: "grid",
+        placeItems: "center",
+        background: "linear-gradient(135deg, #0f172a, #1e293b)",
+        color: "#f8fafc",
+        padding: "24px",
+        textAlign: "center",
+        fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+      }}
+    >
+      <section style={{ maxWidth: "640px" }}>
+        <h1 style={{ fontSize: "clamp(2rem, 6vw, 3rem)", marginBottom: "12px" }}>
+          Frontend Under Maintenance
+        </h1>
+        <p style={{ fontSize: "1.1rem", lineHeight: 1.6, marginBottom: "10px" }}>
+          We are currently updating the website to improve your experience.
+        </p>
+        <p style={{ opacity: 0.9, margin: 0 }}>
+          Please check back shortly. Thank you for your patience.
+        </p>
+      </section>
+    </main>
   );
 }
 
