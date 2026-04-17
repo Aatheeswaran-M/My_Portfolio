@@ -1,0 +1,119 @@
+.experience-container {
+  color: white;
+  padding: 50px 8%;
+  font-family: "Poppins", sans-serif;
+  background-size: 40px 40px;
+  min-height: 50vh;
+  display: block;
+  visibility: visible;
+}
+
+.exp-title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.exp-underline {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff007f, #9333ea);
+  margin: 0 auto 15px auto;
+  border-radius: 4px;
+}
+
+.exp-subtitle {
+  text-align: center;
+  color: #ccc;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 60px;
+}
+
+.highlight {
+  color: #ff66cc;
+  font-weight: 600;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.exp-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 0, 150, 0.05);
+  transition: all 0.3s ease;
+}
+
+.exp-card:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 150, 0.15);
+  transform: translateY(-4px);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exp-header h3 {
+  color: #ff66cc;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.exp-date {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.exp-company {
+  color: #c084fc;
+  font-size: 1rem;
+  margin: 5px 0 15px 0;
+}
+
+.exp-tasks {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #ddd;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.skill-tag {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin: 5px 6px 0 0;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: #ff66cc;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .exp-card {
+    padding: 20px;
+  }
+
+  .exp-header h3 {
+    font-size: 1.2rem;
+  }
+}
